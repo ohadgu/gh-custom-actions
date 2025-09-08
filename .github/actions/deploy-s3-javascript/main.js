@@ -5,8 +5,8 @@ const exec = require('child_process').exec;
 function run() {
     // 1) Get some input values
     const bucket = core.getInput('bucket', { required: true });
-    const bucketRegion = core.getInput('bucketRegion', { required: true });
-    const distFolder = core.getInput('distFolder', { required: true });
+    const bucketRegion = core.getInput('bucket-region', { required: true });
+    const distFolder = core.getInput('dist-folder', { required: true });
 
     // 2) Upload files
     const s3Uri = `s3://${bucket}`;
